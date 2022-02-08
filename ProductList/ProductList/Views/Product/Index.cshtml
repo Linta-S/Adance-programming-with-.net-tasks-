@@ -1,0 +1,27 @@
+﻿@model List<ProductList.Models.product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Product List 1-10</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Details</th>
+        <th>Price</th>
+    </tr>
+
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+            <td>@p.Details</td>
+            <td>@p.Price</td>
+        </tr>
+
+    }
+
+
+</table>
