@@ -1,0 +1,18 @@
+﻿@model StudentCrud.Models.Database.studentC
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<form action="/Student/Create" method="post">
+    <input type="text" name="Name" class="form-control" placeholder="Enter your Name" />
+    <br>
+    <input type="text" name="Department" class="form-control" placeholder="Enter Name your Department" />
+    <br/>
+    <input type="text" name="Age" class="form-control" placeholder="Enter your Age" />
+    <br />
+    <input type="text" name="CGPA" class="form-control" placeholder="Enter your CGPA" />
+    <br />
+    <input type="submit" class="btn btn-block" colour="blue"value="Create" />
+</form>
+

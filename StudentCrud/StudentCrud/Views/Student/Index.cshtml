@@ -1,0 +1,33 @@
+﻿ @model List<StudentCrud.Models.Database.studentC>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Age</th>
+        <th>CGPA</th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach(var s in Model)
+            {
+<tr>
+    <td>@s.Id</td>
+    <td>@s.Name</td>
+    <td>@s.Department</td>
+    <td>@s.Age</td>
+    <td>@s.CGPA</td>
+    <td><a class="btn btn-success" href="/Student/Edit/@s.Id">Edit</a></td>
+    <td><a class="btn btn-danger" href="/Student/Delete/@s.Id">Delete</a></td>
+
+</tr>
+
+            }
+</table>
+

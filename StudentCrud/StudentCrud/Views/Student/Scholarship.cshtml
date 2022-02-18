@@ -1,0 +1,51 @@
+﻿@model List<StudentCrud.Models.Database.studentC>
+@{
+    ViewBag.Title = "Scholarship";
+}
+
+<h2>Scholarship</h2>
+
+ 
+
+<div class="d-flex justify-content-center align-items-center   " style="min-height: 80vh">
+
+
+
+    <div class="container">
+        <h2 class="text-center text-danger my-5">Scholarship Who's CGPA >= 3.75 </h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Age</th>
+                <th>CGPA</th>
+                
+            </tr>
+            @foreach (var s in Model)
+            {
+                <tr>
+                    <td>
+                        @s.Id
+                    </td>
+                    <td>
+                        @s.Name
+                    </td>
+                    <td>
+                        @s.Department
+                    </td>
+                    <td>
+                        @s.Age
+                    </td>
+                    <td>
+                        @s.CGPA
+                    </td>
+                    
+                </tr>
+            }
+        </table>
+
+    </div>
+
+
+</div>
