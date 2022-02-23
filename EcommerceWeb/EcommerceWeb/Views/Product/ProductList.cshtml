@@ -1,0 +1,61 @@
+﻿@model List<EcommerceWeb.Models.Database.ProductL>
+@{
+    ViewBag.Title = "ProductList";
+}
+
+
+
+<div class="container">
+    <h4 class="text-danger mb-3 mt-5 text-center fw-bold text-uppercase">All Products</h4>
+
+    <a href="/Product/Create" class="btn btn-sm btn-primary mb-2">Add Product</a>
+    <table class="table table-striped">
+        <tr>
+            <th class="text-center">Id</th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Price</th>
+            <th class="text-center">Quantity</th>
+            <th class="text-center">Image</th>
+            <th class="text-center">Action</th>
+        </tr>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td class="text-center">
+                    @p.Id
+                </td>
+                <td class="text-center">
+                    @p.P_Name
+                </td>
+                <td class="text-center">
+                    @p.Price
+                </td>
+                <td class="text-center">
+                    @p.Quantity
+                </td>
+                <td class="text-center">
+                    <img src="@p.Image" alt="Alternate Text" style="height: 50px; width: 50px" />
+                </td>
+                <td style="display: flex; justify-content: center " class="text-center">
+                   
+                    <form class="mt-3" action="/Product/Edit" method="post">
+                        <input type="hidden" name="Id" value="@p.Id" />
+                        <input type="Submit" value="Edit" class="btn btn-sm btn-warning mt-3" />
+                    </form>
+
+
+
+                    <form class="mt-3" action="/Product/Delete" method="post">
+                        <input type="hidden" name="Id" value="@p.Id" />
+                        <input type="Submit" value="Delete" class="btn btn-danger btn-sm" />
+                    </form>
+                </td>
+
+            </tr>
+        }
+    </table>
+
+
+
+</div>
+

@@ -1,0 +1,53 @@
+﻿ 
+@model List<EcommerceWeb.Models.Database.ProductL>
+@{
+    ViewBag.Title = "Home";
+}
+
+<style>
+    .card .card-img-top {
+        overflow: hidden;
+    }
+
+        .card .card-img-top img {
+            display: block;
+            height: 250px;
+            width: 100%;
+            transform: scale(1);
+            transition: 0.3s ease-in-out;
+        }
+
+            .card .card-img-top img:hover {
+                transform: scale(1.2);
+            }
+</style>
+
+
+
+<div class="container mt-5" style="min-height: 80vh">
+    <div class="row">
+        <h4 class="fw-bold text-danger text-uppercase mb-3">Latest Product</h4>
+        @foreach (var p in Model)
+        {
+            <div class="col-md-3">
+                <div class="" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;">
+                    <div class="card mb-4">
+                        <div class="card-img-top">
+                            <img src="@p.Image">
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="fw-bold text-primary">@p.P_Name</h5>
+                            <div class="d-flex">
+                                <p class=" fw-bold">Price: @p.Price</p>
+                                <p class=" fw-bold ms-auto text-danger">Quantity: @p.Quantity</p>
+                            </div>
+                            <a href="#" class="btn btn-info btn-sm fw-bold px-3">Add <img class="mb-1 ms-2" style="height: 20px; width: 20px" src="../../Image/asset/cart.png" alt="Alternate Text" /> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
