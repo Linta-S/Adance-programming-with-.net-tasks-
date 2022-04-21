@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        <form action="/User/Edit/" method="post" enctype="multipart/form-data">
+            <input type="text" name="U_name" value="@Model.U_Name" class="form-control"   />
+            <br>
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <input type="text" name="U_phone" value="@Model.U_phone" class="form-control"   />
+            <br>
+            <input type="text" name="U_address" value="@Model.U_address" class="form-control"   />
+            <br />
+            <input type="text" name="U_username" value="@Model.U_username" class="form-control"   />
+            <br />
+            <input type="text" name="U_email" value="@Model.U_email" class="form-control"   />
+            <br />
+            <input type="text" name="U_password" value="@Model.U_password" class="form-control"   />
+            <br>
+            <!--<select name="Usertype" class="form-control">
+        <option value="1">Admin </option>
+        <option value="2">Customer </option>
+        <option value="3">Seller</option>
+        <option value="4">DeliveryMan</option>
+
+    </select>-->
+            <input type="text" name="Usertype" value="@Model.Usertype" class="form-control"  />
+       
+            <br>
+            <input type="text" name="pharmacyname" class="form-control" placeholder="Enter pharmacyname" />
+
+            <input type="submit" class="btn btn-block" colour="blue" value="Add" />
+</div>
+</body>
+</html>

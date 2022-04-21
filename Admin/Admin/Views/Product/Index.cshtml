@@ -1,0 +1,57 @@
+﻿@model List<Admin.Models.Database.Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    .card .card-img-top {
+        overflow: hidden;
+    }
+
+        .card .card-img-top img {
+            display: block;
+            height: 250px;
+            width: 100%;
+            transform: scale(1);
+            transition: 0.3s ease-in-out;
+        }
+
+            .card .card-img-top img:hover {
+                transform: scale(1.2);
+            }
+</style>
+
+
+
+<div class="container mt-5" style="min-height: 80vh; text-align:center;">
+    <div class="row">
+        <h4 class="fw-bold text-danger text-uppercase mb-3">Latest Product</h4>
+        @foreach (var p in Model)
+        {
+            <div class="col-md-3">
+                <div class="" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;">
+                    <div class="card mb-4">
+                        <div class="card-img-top">
+                            <img style="width:100%" src="@p.P_img"  />
+                            <!--<img src="~/Image/9220159341.jpg" style="width:100%" />-->
+                        </div>
+                       
+                        <div class="card-body">
+                            <h5 class="fw-bold text-primary">@p.P_name</h5>
+                            <div class="d-flex">
+                                <p class=" fw-bold">Price: @p.P_price </p>
+                                <p class=" fw-bold ms-auto text-danger">Category: @p.P_categorie_id</p>
+                                <p class=" fw-bold ms-auto text-danger">Quantity: @p.P_quantity</p>
+                                <p class=" fw-bold ms-auto text-danger">Details: @p.P_details</p>
+                                <!--<img style="width:100%" src="@p.P_img" alt="notfound img" />-->
+                                <!--<p class=" fw-bold ms-auto text-danger">Details: @p.P_img</p>-->
+                            </div>
+                            <a href="#" class="btn btn-info btn-sm fw-bold px-3">Add <img class="mb-1 ms-2" style="height: 20px; width: 20px" src="../../Image/asset/cart.png" alt="Alternate Text" /> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

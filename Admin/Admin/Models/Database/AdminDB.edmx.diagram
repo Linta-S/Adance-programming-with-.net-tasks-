@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="88cdc34bb95c4b6fb62b2097d4007121" Name="Diagram1">
+        <EntityTypeShape EntityType="projectdatabaseModel.addtocart" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectdatabaseModel.Category" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectdatabaseModel.deliverinfo" Width="1.5" PointX="8.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectdatabaseModel.myorder" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectdatabaseModel.Orderdetail" Width="1.5" PointX="8.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectdatabaseModel.Product" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectdatabaseModel.Rating" Width="1.5" PointX="5.25" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectdatabaseModel.returndeteli" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectdatabaseModel.Returnproduct" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectdatabaseModel.Systemuser" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="projectdatabaseModel.FK_addtocart_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="projectdatabaseModel.FK_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="projectdatabaseModel.FK_deliverinfo_myorders" ManuallyRouted="false" />
+        <AssociationConnector Association="projectdatabaseModel.FK_myorders_myorders" ManuallyRouted="false" />
+        <AssociationConnector Association="projectdatabaseModel.FK_Orderdetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="projectdatabaseModel.FK_Orderdetails_Products1" ManuallyRouted="false" />
+        <AssociationConnector Association="projectdatabaseModel.FK_Rating_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="projectdatabaseModel.FK_returndetelis_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="projectdatabaseModel.FK_returndetelis_Returnproduct" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

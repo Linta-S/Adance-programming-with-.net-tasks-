@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>login</h2>
+
+<form action="/AdminHome/login/" method="post" enctype="multipart/form-data">
+
+    <br />
+    <input type="text" name="U_username" class="form-control" placeholder="Enter YOUR userName" />
+
+    <br />
+    <input type="password" name="U_password" class="form-control" placeholder="Enter your Password" />
+    <br>
+    <input type="submit" class="btn btn-success"   value="Log-In" />

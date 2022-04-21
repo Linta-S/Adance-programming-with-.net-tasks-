@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="projectdatabaseModelStoreContainer" CdmEntityContainer="projectdatabaseEntities">
+    <EntitySetMapping Name="addtocarts">
+      <EntityTypeMapping TypeName="projectdatabaseModel.addtocart">
+        <MappingFragment StoreEntitySet="addtocart">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="P_id" ColumnName="P_id" />
+          <ScalarProperty Name="P_O_quantity" ColumnName="P_O_quantity" />
+          <ScalarProperty Name="P_tprice" ColumnName="P_tprice" />
+          <ScalarProperty Name="U_username" ColumnName="U_username" />
+          <ScalarProperty Name="P_name" ColumnName="P_name" />
+          <ScalarProperty Name="p_img" ColumnName="p_img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="projectdatabaseModel.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="deliverinfoes">
+      <EntityTypeMapping TypeName="projectdatabaseModel.deliverinfo">
+        <MappingFragment StoreEntitySet="deliverinfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="O_id" ColumnName="O_id" />
+          <ScalarProperty Name="D_username" ColumnName="D_username" />
+          <ScalarProperty Name="D_statue" ColumnName="D_statue" />
+          <ScalarProperty Name="D_time" ColumnName="D_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="myorders">
+      <EntityTypeMapping TypeName="projectdatabaseModel.myorder">
+        <MappingFragment StoreEntitySet="myorders">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Oder_id" ColumnName="Oder_id" />
+          <ScalarProperty Name="User_id" ColumnName="User_id" />
+          <ScalarProperty Name="U_username" ColumnName="U_username" />
+          <ScalarProperty Name="totale_price" ColumnName="totale_price" />
+          <ScalarProperty Name="Paymanttype" ColumnName="Paymanttype" />
+          <ScalarProperty Name="O_status" ColumnName="O_status" />
+          <ScalarProperty Name="totale_iteam" ColumnName="totale_iteam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orderdetails">
+      <EntityTypeMapping TypeName="projectdatabaseModel.Orderdetail">
+        <MappingFragment StoreEntitySet="Orderdetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Order_id" ColumnName="Order_id" />
+          <ScalarProperty Name="P_id" ColumnName="P_id" />
+          <ScalarProperty Name="P_O_quantity" ColumnName="P_O_quantity" />
+          <ScalarProperty Name="P_tprice" ColumnName="P_tprice" />
+          <ScalarProperty Name="U_username" ColumnName="U_username" />
+          <ScalarProperty Name="P_name" ColumnName="P_name" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="p_img" ColumnName="p_img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="projectdatabaseModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="P_name" ColumnName="P_name" />
+          <ScalarProperty Name="P_price" ColumnName="P_price" />
+          <ScalarProperty Name="P_categorie_id" ColumnName="P_categorie_id" />
+          <ScalarProperty Name="P_quantity" ColumnName="P_quantity" />
+          <ScalarProperty Name="P_details" ColumnName="P_details" />
+          <ScalarProperty Name="P_img" ColumnName="P_img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ratings">
+      <EntityTypeMapping TypeName="projectdatabaseModel.Rating">
+        <MappingFragment StoreEntitySet="Rating">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="rating1" ColumnName="rating" />
+          <ScalarProperty Name="Review" ColumnName="Review" />
+          <ScalarProperty Name="Product_id" ColumnName="Product_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="returndetelis">
+      <EntityTypeMapping TypeName="projectdatabaseModel.returndeteli">
+        <MappingFragment StoreEntitySet="returndetelis">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="p_name" ColumnName="p_name" />
+          <ScalarProperty Name="p_quantity" ColumnName="p_quantity" />
+          <ScalarProperty Name="p_price" ColumnName="p_price" />
+          <ScalarProperty Name="return_id" ColumnName="return_id" />
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Returnproducts">
+      <EntityTypeMapping TypeName="projectdatabaseModel.Returnproduct">
+        <MappingFragment StoreEntitySet="Returnproduct">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="return_id" ColumnName="return_id" />
+          <ScalarProperty Name="reason" ColumnName="reason" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="statuse" ColumnName="statuse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Systemusers">
+      <EntityTypeMapping TypeName="projectdatabaseModel.Systemuser">
+        <MappingFragment StoreEntitySet="Systemusers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="U_name" ColumnName="U_name" />
+          <ScalarProperty Name="U_phone" ColumnName="U_phone" />
+          <ScalarProperty Name="U_address" ColumnName="U_address" />
+          <ScalarProperty Name="U_username" ColumnName="U_username" />
+          <ScalarProperty Name="U_email" ColumnName="U_email" />
+          <ScalarProperty Name="U_password" ColumnName="U_password" />
+          <ScalarProperty Name="Usertype" ColumnName="Usertype" />
+          <ScalarProperty Name="U_profileimg" ColumnName="U_profileimg" />
+          <ScalarProperty Name="pharmacyname" ColumnName="pharmacyname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

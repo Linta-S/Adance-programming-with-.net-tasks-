@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="projectdatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="addtocart">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="P_id" Type="int" Nullable="false" />
+    <Property Name="P_O_quantity" Type="int" Nullable="false" />
+    <Property Name="P_tprice" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="U_username" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="P_name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="p_img" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="deliverinfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="O_id" Type="int" Nullable="false" />
+    <Property Name="D_username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="D_statue" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="D_time" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="myorders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Oder_id" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="User_id" Type="int" Nullable="false" />
+    <Property Name="U_username" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="totale_price" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Paymanttype" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="O_status" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="totale_iteam" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Orderdetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Order_id" Type="int" Nullable="false" />
+    <Property Name="P_id" Type="int" Nullable="false" />
+    <Property Name="P_O_quantity" Type="int" Nullable="false" />
+    <Property Name="P_tprice" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="U_username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="P_name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="p_img" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="P_name" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="P_price" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="P_categorie_id" Type="int" Nullable="false" />
+    <Property Name="P_quantity" Type="int" Nullable="false" />
+    <Property Name="P_details" Type="text" Nullable="false" />
+    <Property Name="P_img" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rating">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rating" Type="float" Nullable="false" />
+    <Property Name="Review" Type="text" Nullable="false" />
+    <Property Name="Product_id" Type="int" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="returndetelis">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="p_name" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="p_quantity" Type="int" Nullable="false" />
+    <Property Name="p_price" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="return_id" Type="int" Nullable="false" />
+    <Property Name="p_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Returnproduct">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="return_id" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="reason" Type="text" Nullable="false" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="statuse" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Systemusers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="U_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="U_phone" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="U_address" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="U_username" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="U_email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="U_password" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Usertype" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="U_profileimg" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="pharmacyname" Type="varchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_addtocart_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="addtocart" Type="Self.addtocart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="addtocart">
+        <PropertyRef Name="P_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_deliverinfo_myorders">
+    <End Role="myorders" Type="Self.myorders" Multiplicity="1" />
+    <End Role="deliverinfo" Type="Self.deliverinfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="myorders">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="deliverinfo">
+        <PropertyRef Name="O_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_myorders_myorders">
+    <End Role="Systemusers" Type="Self.Systemusers" Multiplicity="1" />
+    <End Role="myorders" Type="Self.myorders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Systemusers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="myorders">
+        <PropertyRef Name="User_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orderdetails_Products">
+    <End Role="myorders" Type="Self.myorders" Multiplicity="1" />
+    <End Role="Orderdetails" Type="Self.Orderdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="myorders">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Orderdetails">
+        <PropertyRef Name="Order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orderdetails_Products1">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Orderdetails" Type="Self.Orderdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Orderdetails">
+        <PropertyRef Name="P_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Categories">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="P_categorie_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rating_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Rating" Type="Self.Rating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Rating">
+        <PropertyRef Name="Product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_returndetelis_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="returndetelis" Type="Self.returndetelis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="returndetelis">
+        <PropertyRef Name="p_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_returndetelis_Returnproduct">
+    <End Role="Returnproduct" Type="Self.Returnproduct" Multiplicity="1" />
+    <End Role="returndetelis" Type="Self.returndetelis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Returnproduct">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="returndetelis">
+        <PropertyRef Name="return_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="projectdatabaseModelStoreContainer">
+    <EntitySet Name="addtocart" EntityType="Self.addtocart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="deliverinfo" EntityType="Self.deliverinfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="myorders" EntityType="Self.myorders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orderdetails" EntityType="Self.Orderdetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rating" EntityType="Self.Rating" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="returndetelis" EntityType="Self.returndetelis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Returnproduct" EntityType="Self.Returnproduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Systemusers" EntityType="Self.Systemusers" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_addtocart_Products" Association="Self.FK_addtocart_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="addtocart" EntitySet="addtocart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_deliverinfo_myorders" Association="Self.FK_deliverinfo_myorders">
+      <End Role="myorders" EntitySet="myorders" />
+      <End Role="deliverinfo" EntitySet="deliverinfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_myorders_myorders" Association="Self.FK_myorders_myorders">
+      <End Role="Systemusers" EntitySet="Systemusers" />
+      <End Role="myorders" EntitySet="myorders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orderdetails_Products" Association="Self.FK_Orderdetails_Products">
+      <End Role="myorders" EntitySet="myorders" />
+      <End Role="Orderdetails" EntitySet="Orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orderdetails_Products1" Association="Self.FK_Orderdetails_Products1">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Orderdetails" EntitySet="Orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Categories" Association="Self.FK_Products_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rating_Products" Association="Self.FK_Rating_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Rating" EntitySet="Rating" />
+    </AssociationSet>
+    <AssociationSet Name="FK_returndetelis_Products" Association="Self.FK_returndetelis_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="returndetelis" EntitySet="returndetelis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_returndetelis_Returnproduct" Association="Self.FK_returndetelis_Returnproduct">
+      <End Role="Returnproduct" EntitySet="Returnproduct" />
+      <End Role="returndetelis" EntitySet="returndetelis" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
